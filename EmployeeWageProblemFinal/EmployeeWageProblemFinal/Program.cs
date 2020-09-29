@@ -14,7 +14,7 @@ namespace Welcome
             int empCheck = random.Next(0, 2);
             if (empCheck == IsFullTime)
             {
-                Console.WriteLine("Employee is Present.");
+                Console.WriteLine("Employee is Present");
             }
             else
             {
