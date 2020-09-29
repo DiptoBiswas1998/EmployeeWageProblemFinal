@@ -20,12 +20,10 @@ namespace Welcome
             int empWageTotal = 0;
             int workingHrs = 0;
             int day = 0;
-
             for (day = 0; day < NumOfWorkingDays && workingHrs < TotalNumOfHours; day++)
             {
                 Random random = new Random();
                 int empCheck = random.Next(0, 3);
-
                 switch (empCheck)
                 {
                     case IsFullTime:
@@ -47,7 +45,6 @@ namespace Welcome
             }
             Console.WriteLine("Total days worked = " + day + " Total hours worked = " + workingHrs);
             Console.WriteLine("Monthly Employee Wage = " + empWageTotal);
-
         }
     }
 }
