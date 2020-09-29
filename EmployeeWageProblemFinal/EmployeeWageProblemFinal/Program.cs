@@ -22,6 +22,7 @@ namespace Welcome
             int day = 0;
             for (day = 0; day < NumOfWorkingDays && workingHrs < TotalNumOfHours; day++)
             {
+<<<<<<< HEAD
                 Random random = new Random();
                 int empCheck = random.Next(0, 3);
                 switch (empCheck)
@@ -42,6 +43,13 @@ namespace Welcome
                 empWage = empHr * EmpRatePerHour;
                 empWageTotal += empWage;
                 Console.WriteLine("Employee Wage = " + empWage + " on day " + (day + 1));
+=======
+                Console.WriteLine("Employee is Present");
+            }
+            else
+            {
+                Console.WriteLine("Employee is Absent!");
+>>>>>>> UC1_Attendance
             }
             Console.WriteLine("Total days worked = " + day + " Total hours worked = " + workingHrs);
             Console.WriteLine("Monthly Employee Wage = " + empWageTotal);
