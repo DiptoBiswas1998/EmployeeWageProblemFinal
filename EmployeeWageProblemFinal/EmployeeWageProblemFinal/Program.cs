@@ -10,7 +10,7 @@ namespace Welcome
         public const int EmpRatePerHour = 20;
         public const int NumOfWorkingDays = 20;
         public const int TotalNumOfHours = 100;
-        static void Main(string[] args)
+        public static int computeEmpWage()
         {
             //Welcome msg
             Console.WriteLine("Welcome to the Employee Wage Problem!");
@@ -22,37 +22,31 @@ namespace Welcome
             int day = 0;
             for (day = 0; day < NumOfWorkingDays && workingHrs < TotalNumOfHours; day++)
             {
-<<<<<<< HEAD
                 Random random = new Random();
                 int empCheck = random.Next(0, 3);
                 switch (empCheck)
                 {
                     case IsFullTime:
                         empHr = 8;
-                        workingHrs += empHr;
                         break;
                     case IsPartTime:
                         empHr = 4;
-                        workingHrs += empHr;
                         break;
                     default:
                         empHr = 0;
-                        workingHrs += empHr;
                         break;
                 }
+                workingHrs += empHr;
                 empWage = empHr * EmpRatePerHour;
                 empWageTotal += empWage;
-                Console.WriteLine("Employee Wage = " + empWage + " on day " + (day + 1));
-=======
-                Console.WriteLine("Employee is Present");
-            }
-            else
-            {
-                Console.WriteLine("Employee is Absent!");
->>>>>>> UC1_Attendance
             }
             Console.WriteLine("Total days worked = " + day + " Total hours worked = " + workingHrs);
             Console.WriteLine("Monthly Employee Wage = " + empWageTotal);
+            return empWageTotal;
+        }
+        static void Main(string[] args)
+        {
+            computeEmpWage();
         }
     }
 }
